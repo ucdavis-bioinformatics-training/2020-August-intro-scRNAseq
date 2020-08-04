@@ -31,7 +31,7 @@ All posted times are **Pacific** time zone. At least one break will be provided 
 **8:50 am**  Zoom session starts  
 **9:00 am**  Recap and check R sessions  
 **9:30 am**  Seurat analysis, continued  
-**11:30 am** Cell Preparation _Dr. Diana Burkard-Waco, UC Davis DNA Technologies Core_   
+**11:30 am** Cell Preparation _Dr. Diana Burkart-Waco, UC Davis DNA Technologies Core_   
 **12:00 pm** Lunch     
 **1:00 pm** Seurat analysis, continued   
 **4:30 pm** Closing  
