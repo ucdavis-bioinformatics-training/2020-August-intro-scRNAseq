@@ -41,11 +41,11 @@ Because video is involved, we ask everyone to be respectful and we reserve the r
 
 ####  Slack
 
-Text based communication will be conducted via a Slack channel. Staff will be monitoring the Slack channel to answer questions (and schedule a Zoom break out room if needed). If you know the answer to someone elses question, feel free to answer it.
+Text based communication will be conducted via a Slack channel. Staff will be monitoring the Slack channel to answer questions (and schedule a Zoom break out room if needed). If you know the answer to someone else's question, feel free to answer it.
 
 #### Patience
 
-We ask for a little more patience as this process is also new to us, but we are comitted to providing you the best educational experience we can (under the current conditions).
+We ask for a little more patience as this process is also new to us, but we are committed to providing you the best educational experience we can (under the current conditions).
 
 ### Workshop Goals
 
@@ -79,7 +79,7 @@ Workshop materials are all posted on github, and publicly available
 
 * This Intro to scRNAseq Workshop
 
-   [https://ucdavis-bioinformatics-training.github.io/2020-Intro_Single_Cell_RNA_Seq/](https://ucdavis-bioinformatics-training.github.io/2020-August-intro_scRNAseq/)
+   [https://ucdavis-bioinformatics-training.github.io/2020-August-intro-scRNAseq/](https://ucdavis-bioinformatics-training.github.io/2020-August-intro-scRNAseq/)
 
 ### Computing Cluster
 
