@@ -79,7 +79,7 @@ Workshop materials are all posted on github, and publicly available
 
 * This Intro to scRNAseq Workshop
 
-   [https://ucdavis-bioinformatics-training.github.io/2020-Intro_Single_Cell_RNA_Seq/](https://ucdavis-bioinformatics-training.github.io/2020-Intro_Single_Cell_RNA_Seq/)
+   [https://ucdavis-bioinformatics-training.github.io/2020-Intro_Single_Cell_RNA_Seq/](https://ucdavis-bioinformatics-training.github.io/2020-August-intro_scRNAseq/)
 
 ### Computing Cluster
 

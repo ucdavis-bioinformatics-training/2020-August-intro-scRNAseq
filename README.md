@@ -1,12 +1,10 @@
 All documentation for the workshop is best viewed from the github.io pages
 
-[Documentation](https://ucdavis-bioinformatics-training.github.io/2020-Intro_Single_Cell_RNA_Seq/)
+[Documentation](https://ucdavis-bioinformatics-training.github.io/2020-August-intro-scRNAseq/)
 
 Bioinformatics: Introduction to Single Cell RNA-Seq Analysis Workshop
 
-May 20, 2020 - May 22, 2020, 9 a.m. - 4:30 p.m daily. **online learning**
-
-Aug. 12, 2020 - Aug. 14, 2020, 9 a.m. - 4:30 p.m daily. **@ UC Davis**
+Aug. 12, 2020 - Aug. 14, 2020, 9 a.m. - 4:30 p.m daily. **Online learning**
 
 Contact - UC Davis Bioinformatics Core, [training.bioinformatics@ucdavis.edu](mailto:training.bioinformatics@ucdavis.edu)
 
@@ -39,6 +37,4 @@ If you have any questions, please don’t hesitate to contact us at [training.bi
 
 ### Register
 
-For the remote/virtual [course](https://registration.genomecenter.ucdavis.edu/events/intro_scRNASeq_remote/).
-
-For the onsite UC Davis [course](https://registration.genomecenter.ucdavis.edu/events/intro_scRNASeq_2020_Davis/)
+Register for the August 2020 online [course](https://registration.genomecenter.ucdavis.edu/events/intro_scRNASeq_aug_2020_online/)
