@@ -18,9 +18,9 @@ All posted times are **Pacific** time zone. At least one break will be provided 
 ### Thursday, August 13
 
 **8:50 am**  Zoom session starts  
-**9:00 am**  Recap and check R sessions    
-**9:15 am**  Introduction to R and RStudio      
-**11:00 am** Cell Preparation _Dr. Diana Burkart-Waco, UC Davis DNA Technologies Core_    
+**9:00 am**  Introduction to R and RStudio      
+**11:00 am** Cell Preparation _Dr. Diana Burkart-Waco, UC Davis DNA Technologies Core_   
+**11:30 am** Sponsored talk _10x Genomics_ 
 **12:00 pm** Lunch      
 **1:00 pm**  Single cell RNA-Seq analysis in Seurat   
 **4:45 pm**  Recap and homework  
