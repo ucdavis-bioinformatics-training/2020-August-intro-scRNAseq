@@ -13,9 +13,9 @@ A greater than sign (>) instead of a prompt means the shell is expecting more in
 
 ## Most Common Mistakes
 
-1. Your in the wrong directory, use the command `pwd` to show what directory your in.
-2. Spelling/Capilalization, check the command carefully for errors, use your <TAB>.
-3. Spaces, you may have put (or not put a space where needed).
+1. You're in the wrong directory: use the command `pwd` to show what directory you're in.
+2. Spelling/Capilalization: check the command carefully for errors, use your <TAB> tab key.
+3. Spaces: you may have put (or not put a space where needed).
 
 ## Directory Structure
 
