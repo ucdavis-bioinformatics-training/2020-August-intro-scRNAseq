@@ -565,7 +565,7 @@ grep -o . $1 | \
 </code></pre>
 
 
-Cntrl-X top exit first saving the document. Follow the instruction at the bottom of the screen
+Cntrl-X to exit first saving the document. Follow the instruction at the bottom of the screen
 
 Note that '$1' means 'the value of the 1st argument to the shell script' ... in other words, the text that follows the shell script name when we run it (see below).
 
