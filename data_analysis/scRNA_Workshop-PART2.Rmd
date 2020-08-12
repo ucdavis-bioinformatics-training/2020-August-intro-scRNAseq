@@ -127,7 +127,7 @@ mm.pairs <- readRDS(system.file("exdata", "mouse_cycle_markers.rds", package="sc
 mat <- as.matrix(GetAssayData(experiment.aggregate))
 
 # Convert rownames to ENSEMBL IDs, Using biomaRt
-ensembl<- useMart(biomart = "ensembl", dataset = "mmusculus_gene_ensembl")
+ensembl<- useEnsembl(biomart = "ensembl", dataset = "mmusculus_gene_ensembl", mirror = "uswest")
 
 anno <- getBM( values=rownames(mat), attributes=c("mgi_symbol","ensembl_gene_id") , filters= "mgi_symbol"  ,mart=ensembl)
 
@@ -156,8 +156,8 @@ table(Idents(experiment.aggregate))
 
 convertHumanGeneList <- function(x){
   require("biomaRt")
-  human = useMart("ensembl", dataset = "hsapiens_gene_ensembl")
-  mouse = useMart("ensembl", dataset = "mmusculus_gene_ensembl")
+  human = useEnsembl("ensembl", dataset = "hsapiens_gene_ensembl", mirror = "uswest")
+  mouse = useEnsembl("ensembl", dataset = "mmusculus_gene_ensembl", mirror = "uswest")
 
   genes = getLDS(attributes = c("hgnc_symbol"), filters = "hgnc_symbol", values = x , mart = human, attributesL = c("mgi_symbol"), martL = mouse, uniqueRows=T)
 

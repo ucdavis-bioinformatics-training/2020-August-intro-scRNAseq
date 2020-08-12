@@ -21,8 +21,8 @@ load(file="original_seurat_object.RData")
 experiment.aggregate
 ```
 
-<div class='r_output'> An object of class Seurat 
- 12811 features across 2896 samples within 1 assay 
+<div class='r_output'> An object of class Seurat
+ 12811 features across 2896 samples within 1 assay
  Active assay: RNA (12811 features, 0 variable features)
 </div>
 ## Some basic QA/QC of the metadata, print tables of the 5% quantiles.
@@ -186,8 +186,8 @@ experiment.aggregate <- subset(experiment.aggregate, nCount_RNA >= 500 & nCount_
 experiment.aggregate
 ```
 
-<div class='r_output'> An object of class Seurat 
- 12811 features across 2681 samples within 1 assay 
+<div class='r_output'> An object of class Seurat
+ 12811 features across 2681 samples within 1 assay
  Active assay: RNA (12811 features, 0 variable features)
 </div>
 ### You may also want to filter out additional genes.
@@ -220,8 +220,8 @@ experiment.aggregate.genes <- FilterGenes(object = experiment.aggregate, min.val
 experiment.aggregate.genes
 ```
 
-<div class='r_output'> An object of class Seurat 
- 1117 features across 2681 samples within 1 assay 
+<div class='r_output'> An object of class Seurat
+ 1117 features across 2681 samples within 1 assay
  Active assay: RNA (1117 features, 0 variable features)
 </div>
 
@@ -229,8 +229,8 @@ experiment.aggregate.genes
 table(Idents(experiment.aggregate))
 ```
 
-<div class='r_output'> 
-  UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def 
+<div class='r_output'>
+  UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def
            808           947           926
 </div>
 ## Next we want to normalize the data
@@ -263,7 +263,7 @@ mm.pairs <- readRDS(system.file("exdata", "mouse_cycle_markers.rds", package="sc
 mat <- as.matrix(GetAssayData(experiment.aggregate))
 
 # Convert rownames to ENSEMBL IDs, Using biomaRt
-ensembl<- useMart(biomart = "ensembl", dataset = "mmusculus_gene_ensembl")
+ensembl<- useEnsembl(biomart = "ensembl", dataset = "mmusculus_gene_ensembl", mirror = "uswest")
 
 anno <- getBM( values=rownames(mat), attributes=c("mgi_symbol","ensembl_gene_id") , filters= "mgi_symbol"  ,mart=ensembl)
 
@@ -316,15 +316,15 @@ First need to convert to mouse symbols, we'll use Biomart for that too.
 table(Idents(experiment.aggregate))
 ```
 
-<div class='r_output'> 
-  UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def 
+<div class='r_output'>
+  UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def
            808           947           926
 </div>
 ```r
 convertHumanGeneList <- function(x){
   require("biomaRt")
-  human = useMart("ensembl", dataset = "hsapiens_gene_ensembl")
-  mouse = useMart("ensembl", dataset = "mmusculus_gene_ensembl")
+  human = useEnsembl("ensembl", dataset = "hsapiens_gene_ensembl", mirror = "uswest")
+  mouse = useEnsembl("ensembl", dataset = "mmusculus_gene_ensembl", mirror = "uswest")
 
   genes = getLDS(attributes = c("hgnc_symbol"), filters = "hgnc_symbol", values = x , mart = human, attributesL = c("mgi_symbol"), martL = mouse, uniqueRows=T)
 
@@ -443,8 +443,8 @@ table(scran=experiment.aggregate$cell.cycle, seurat=experiment.aggregate$Phase) 
 table(Idents(experiment.aggregate))
 ```
 
-<div class='r_output'> 
- G2M   S  G1 
+<div class='r_output'>
+ G2M   S  G1
  854 882 945
 </div>
 ```r
@@ -453,8 +453,8 @@ Idents(experiment.aggregate) <- "orig.ident"
 table(Idents(experiment.aggregate))
 ```
 
-<div class='r_output'> 
-  UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def 
+<div class='r_output'>
+  UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def
            808           947           926
 </div>
 
@@ -519,20 +519,20 @@ sessionInfo()
 <div class='r_output'> R version 4.0.0 (2020-04-24)
  Platform: x86_64-apple-darwin17.0 (64-bit)
  Running under: macOS Catalina 10.15.4
- 
+
  Matrix products: default
  BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
  LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
- 
+
  locale:
  [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
- 
+
  attached base packages:
  [1] stats     graphics  grDevices datasets  utils     methods   base     
- 
+
  other attached packages:
  [1] kableExtra_1.1.0 knitr_1.28       biomaRt_2.44.0   Seurat_3.1.5    
- 
+
  loaded via a namespace (and not attached):
    [1] BiocFileCache_1.12.0        plyr_1.8.6                 
    [3] igraph_1.2.5                lazyeval_0.2.2             
