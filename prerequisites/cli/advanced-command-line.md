@@ -6,7 +6,7 @@ The sed command
 
 Let's take a look at the 'sed' command. sed (short for stream editor) is a command that allows you to manipulate character data in various ways. One useful thing it can do is substitution. First, make a directory called "advanced" to work in, for this document. If you have access to /share/workshop, then make the "advanced" directory under your username there. If you don't, just put the "advanced" directory in your home. The "$USER" variable contains your username.
 
-    cd /share/workshop/$USER/  # or, if this fails, just 'cd ~' or 'cd'
+    cd /share/workshop/intro_scrnaseq/$USER/  # or, if this fails, just 'cd ~' or 'cd'
     mkdir advanced
     cd advanced/
 
@@ -61,7 +61,7 @@ In order to do the counting, we first need to sort the data and then send it to 
 Now let's look at some fastq files. Link a few files into the advanced directory:
 
     ln -s /share/biocore-archive/Leveau_J_UCD/RNASeq_Arabidopsis_2016/00-RawData/*/*.fastq.gz .
-    
+
 Since the files are gzipped files we need to use "zcat" to look at them. zcat is just like cat except for gzipped files:
 
     zcat C61_S67_L006_R1_001.fastq.gz | head
@@ -296,7 +296,7 @@ Grep is a very powerful tool that has many applications. Grep can be used to fin
 
     zcat C61_S67_L006_R1_001.fastq.gz | grep -B1 -A2 CACAATGTTTCTGCTGCCTGAACC
 
-This looks for the sequence "CACAATGTTTCTGCTGCCTGAACC" in the fastq file and then also prints the line before and two lines after each match. 
+This looks for the sequence "CACAATGTTTCTGCTGCCTGAACC" in the fastq file and then also prints the line before and two lines after each match.
 
 Another thing grep can do is regular expressions. Regular expressions are a way of specifying a search pattern. Two very useful characters in regular expressions are "^" and "$". The "^" symbol specifies the beginning of a line and the "$" specifies the end of a line. So, for example, if you wanted to find just the lines that began with "TTCCAACACA" you would do this:
 
@@ -371,4 +371,3 @@ Take a look at the [awk manual](https://www.gnu.org/software/gawk/manual/gawk.ht
 
 **HARD CHALLENGE**:
 Go through the list of genomes (as in the Find section) and this time only search down a maximum of 6 directories and also follow symbolic links in the search. Then extract only those files that are part of either the zebrafish or C. elegans genomes. For each of those files, get the number of characters in the file and then only print files whose character count is less than 10000. You will have to probably use find, grep, xargs, wc, and awk. You will need to look at the manual pages for each of those commands. You should be able to do this just using pipes and the commands (i.e. no intermediate files).
-

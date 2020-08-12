@@ -17,7 +17,7 @@ Let's set up a project directory for the analysis, and talk a bit about project 
 
 ```bash
 cd
-mkdir -p /share/workshop/$USER/scrnaseq_example
+mkdir -p /share/workshop/intro_scrnaseq/$USER/scrnaseq_example
 ```
 
 ---
@@ -25,7 +25,7 @@ mkdir -p /share/workshop/$USER/scrnaseq_example
 **2a\.** Next, go into that directory, create a raw data directory (we are going to call this 00-RawData) and cd into that directory. Lets then create symbolic links to the fastq files that contains the raw read data.
 
 ```bash
-cd /share/workshop/$USER/scrnaseq_example
+cd /share/workshop/intro_scrnaseq/$USER/scrnaseq_example
 mkdir 00-RawData
 cd 00-RawData/
 ln -s /share/biocore/workshops/2020_scRNAseq/2017_10X_mouse_comparative_V3/cellranger-fastqs/HG27NBBXX/* .
@@ -44,7 +44,7 @@ cat ../samples.txt
 **3a\.** Now, take a look at the raw data directory.
 
 ```bash
-ls /share/workshop/$USER/scrnaseq_example/00-RawData
+ls /share/workshop/intro_scrnaseq/$USER/scrnaseq_example/00-RawData
 ```
 
 **3b\.** To see a list of the contents of each directory.

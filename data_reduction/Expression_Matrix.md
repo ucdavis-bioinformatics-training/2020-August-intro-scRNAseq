@@ -255,7 +255,7 @@ Cell ranger does produce a pretty html report with the same statistics and some 
 1. Log into tadpole with the username/password given
 
     ```bash
-    cd /share/workshop/$USER/scrnaseq_example
+    cd /share/workshop/intro_scrnaseq/$USER/scrnaseq_example
     ```
 
 2. Load and review cellranger's sub-applications and help docs
@@ -267,7 +267,7 @@ Cell ranger does produce a pretty html report with the same statistics and some 
 5. Link completed result folders to your scrnaseq_example folders.  
 
     ```bash
-    cd /share/workshop/$USER/scrnaseq_example
+    cd /share/workshop/intro_scrnaseq/$USER/scrnaseq_example
     ln -s /share/biocore/workshops/2020_scRNAseq/2017_10X_mouse_comparative_V2 .  
     ln -s /share/biocore/workshops/2020_scRNAseq/2017_10X_mouse_comparative_V3 .  
     ```

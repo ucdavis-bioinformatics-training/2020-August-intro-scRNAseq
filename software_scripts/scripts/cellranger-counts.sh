@@ -29,7 +29,7 @@ module load cellranger/3.1.0
 
 ## Set the parameters for the run
 transcriptome="/share/genomes/cellranger_genomes/refdata-cellranger-mm10-3.0.0"
-basepath="/share/workshop/$USER/scrnaseq_example"
+basepath="/share/workshop/intro_scrnaseq/$USER/scrnaseq_example"
 fastqs="${basepath}/00-RawData"
 
 ## provide the script the row # of the sample to be run
