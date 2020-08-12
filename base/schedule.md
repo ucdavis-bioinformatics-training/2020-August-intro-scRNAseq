@@ -20,7 +20,7 @@ All posted times are **Pacific** time zone. At least one break will be provided 
 **8:50 am**  Zoom session starts  
 **9:00 am**  Recap and check R sessions    
 **9:15 am**  Introduction to R and RStudio      
-**10:45 am** Experimental design    
+**11:00 am** Cell Preparation _Dr. Diana Burkart-Waco, UC Davis DNA Technologies Core_    
 **12:00 pm** Lunch      
 **1:00 pm**  Single cell RNA-Seq analysis in Seurat   
 **4:45 pm**  Recap and homework  
@@ -29,7 +29,7 @@ All posted times are **Pacific** time zone. At least one break will be provided 
 ### Friday, August 14
 
 **8:50 am**  Zoom session starts  
-**9:00 am**  Recap and check R sessions  
+**9:00 am**  Shiny App for Single Cell RNA-Seq analysis _Keith Mitchell, UC Davis Bioinformatics Core_  
 **9:30 am**  Seurat analysis, continued  
 **11:30 am** Cell Preparation _Dr. Diana Burkart-Waco, UC Davis DNA Technologies Core_   
 **12:00 pm** Lunch     
