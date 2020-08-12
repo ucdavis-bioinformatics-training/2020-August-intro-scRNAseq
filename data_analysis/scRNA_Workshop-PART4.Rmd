@@ -85,7 +85,7 @@ experiment.aggregate <- ScoreJackStraw(experiment.aggregate, dims = 1:40)
 JackStrawPlot(object = experiment.aggregate, dims = 1:40)
 ```
 
-Looking at the results of the JackStraw plot, we determine to use the first 35 PCs
+Looking at the results of the JackStraw plot, we determine to use the first 29 PCs
 ```{r}
 use.pcs = 1:29
 ```
