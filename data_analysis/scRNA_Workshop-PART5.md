@@ -21,8 +21,8 @@ experiment.aggregate
 ```
 
 ```
-## An object of class Seurat 
-## 12811 features across 2681 samples within 1 assay 
+## An object of class Seurat
+## 12811 features across 2681 samples within 1 assay
 ## Active assay: RNA (12811 features, 2000 variable features)
 ##  1 dimensional reduction calculated: pca
 ```
@@ -35,7 +35,7 @@ The FindClusters function implements the procedure, and contains a resolution pa
 
 
 ```r
-use.pcs = 1:29 
+use.pcs = 1:29
 
 ?FindNeighbors
 experiment.aggregate <- FindNeighbors(experiment.aggregate, reduction="pca", dims = use.pcs)
@@ -60,13 +60,13 @@ experiment.aggregate <- FindNeighbors(experiment.aggregate, reduction="pca", dim
 
 ```r
 experiment.aggregate <- FindClusters(
-    object = experiment.aggregate, 
-    resolution = seq(0.25,4,0.25), 
+    object = experiment.aggregate,
+    resolution = seq(0.25,4,0.25),
     verbose = FALSE
 )
 ```
 
-Lets first investigate how many clusters each resolution produces and set it to the smallest resolutions of 0.5 (fewest clusters). 
+Lets first investigate how many clusters each resolution produces and set it to the smallest resolutions of 0.5 (fewest clusters).
 
 
 ```r
@@ -75,13 +75,13 @@ sapply(grep("res",colnames(experiment.aggregate@meta.data),value = TRUE),
 ```
 
 ```
-## RNA_snn_res.0.25  RNA_snn_res.0.5 RNA_snn_res.0.75    RNA_snn_res.1 
-##               10               14               15               16 
-## RNA_snn_res.1.25  RNA_snn_res.1.5 RNA_snn_res.1.75    RNA_snn_res.2 
-##               18               20               24               24 
-## RNA_snn_res.2.25  RNA_snn_res.2.5 RNA_snn_res.2.75    RNA_snn_res.3 
-##               25               26               27               28 
-## RNA_snn_res.3.25  RNA_snn_res.3.5 RNA_snn_res.3.75    RNA_snn_res.4 
+## RNA_snn_res.0.25  RNA_snn_res.0.5 RNA_snn_res.0.75    RNA_snn_res.1
+##               10               14               15               16
+## RNA_snn_res.1.25  RNA_snn_res.1.5 RNA_snn_res.1.75    RNA_snn_res.2
+##               18               20               24               24
+## RNA_snn_res.2.25  RNA_snn_res.2.5 RNA_snn_res.2.75    RNA_snn_res.3
+##               25               26               27               28
+## RNA_snn_res.3.25  RNA_snn_res.3.5 RNA_snn_res.3.75    RNA_snn_res.4
 ##               28               28               28               29
 ```
 
@@ -222,7 +222,7 @@ FeaturePlot(experiment.aggregate, features = c('nFeature_RNA'), pt.size=0.5)
 
 ![](scRNA_Workshop-PART5_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
-percent mitochondrial 
+percent mitochondrial
 
 ```r
 FeaturePlot(experiment.aggregate, features = c('percent.mito'), pt.size=0.5)
@@ -269,8 +269,8 @@ table(Idents(experiment.merged))
 ```
 
 ```
-## 
-##   0   1   2   3   4   5   6   7   8   9  10  11  12  13 
+##
+##   0   1   2   3   4   5   6   7   8   9  10  11  12  13
 ## 484 369 355 268 218 192 192 145 107 105  70  66  57  53
 ```
 
@@ -286,8 +286,8 @@ table(Idents(experiment.merged))
 ```
 
 ```
-## 
-##   0  13   1   2   3   4   5   8  10  11  12 
+##
+##   0  13   1   2   3   4   5   8  10  11  12
 ## 821 158 369 355 268 218 192 107  70  66  57
 ```
 
@@ -347,10 +347,10 @@ table(Idents(experiment.examples))
 ```
 
 ```
-## 
-##   1  10  11  12  13   2   3   4   5   8  R1 R10 R11 R12 R13 R14 R16 R20 R21 R26 
-## 369  70  66  57 158 355 268 218 192 107 172   2   1  92  83   1   5  59  58  42 
-## R27 R28  R6  R8  R9 
+##
+##   1  10  11  12  13   2   3   4   5   8  R1 R10 R11 R12 R13 R14 R16 R20 R21 R26
+## 369  70  66  57 158 355 268 218 192 107 172   2   1  92  83   1   5  59  58  42
+## R27 R28  R6  R8  R9
 ##  32   1 145 105  23
 ```
 
@@ -381,7 +381,7 @@ p + scale_alpha_continuous(range = alpha.use, guide = F)
 Removing cells assigned to clusters from a plot, So here plot all clusters but clusters "3" and "5"
 
 ```r
-# create a new tmp object with those removed 
+# create a new tmp object with those removed
 experiment.aggregate.tmp <- experiment.aggregate[,-which(Idents(experiment.aggregate) %in% c("3","5"))]
 
 dim(experiment.aggregate)
@@ -447,14 +447,14 @@ table(markers$avg_logFC > 0)
 ```
 
 ```
-## 
-## FALSE  TRUE 
+##
+## FALSE  TRUE
 ##   688   786
 ```
 
- 
-pct.1 and pct.2 are the proportion of cells with expression above 0 in ident.1 and ident.2 respectively. p_val is the raw p_value associated with the differntial expression test with adjusted value in p_val_adj. avg_logFC is the average log fold change difference between the two groups. 
- 
+
+pct.1 and pct.2 are the proportion of cells with expression above 0 in ident.1 and ident.2 respectively. p_val is the raw p_value associated with the differntial expression test with adjusted value in p_val_adj. avg_logFC is the average log fold change difference between the two groups.
+
 avg_diff (lines 130, 193 and) appears to be the difference in log(x = mean(x = exp(x = x) - 1) + 1) between groups.  It doesn’t seem like this should work out to be the signed ratio of pct.1 to pct.2 so I must be missing something.  It doesn’t seem to be related at all to how the p-values are calculated so maybe it doesn’t matter so much, and the sign is probably going to be pretty robust to how expression is measured.
 
 Can use a violin plot to visualize the expression pattern of some markers
@@ -469,9 +469,9 @@ Or a feature plot
 
 ```r
 FeaturePlot(
-    experiment.merged, 
-    head(rownames(markers), n=6), 
-    cols = c("lightgrey", "blue"), 
+    experiment.merged,
+    head(rownames(markers), n=6),
+    cols = c("lightgrey", "blue"),
     ncol = 2
 )
 ```
@@ -480,9 +480,9 @@ FeaturePlot(
 
 ```r
 FeaturePlot(    
-    experiment.merged, 
-    "Fxyd1", 
-    cols = c("lightgrey", "blue") 
+    experiment.merged,
+    "Fxyd1",
+    cols = c("lightgrey", "blue")
 )
 ```
 
@@ -494,9 +494,9 @@ __WARNING: TAKES A LONG TIME TO RUN__
 
 ```r
 markers_all <- FindAllMarkers(
-    object = experiment.merged, 
-    only.pos = TRUE, 
-    min.pct = 0.25, 
+    object = experiment.merged,
+    only.pos = TRUE,
+    min.pct = 0.25,
     thresh.use = 0.25
 )
 ```
@@ -572,8 +572,8 @@ table(table(markers_all$gene))
 ```
 
 ```
-## 
-##    1    2    3    4    5    6 
+##
+##    1    2    3    4    5    6
 ## 1460  735  355  107   21    5
 ```
 
@@ -592,8 +592,8 @@ table(table(markers_all_single$gene))
 ```
 
 ```
-## 
-##    1 
+##
+##    1
 ## 1460
 ```
 
@@ -602,8 +602,8 @@ table(markers_all_single$cluster)
 ```
 
 ```
-## 
-##   0  13   1   2   3   4   5   8  10  11  12 
+##
+##   0  13   1   2   3   4   5   8  10  11  12
 ##  98 102  93 113 101 143 259  51 372  16 112
 ```
 
@@ -628,19 +628,19 @@ library(dplyr)
 ```
 
 ```
-## 
+##
 ## Attaching package: 'dplyr'
 ```
 
 ```
 ## The following objects are masked from 'package:stats':
-## 
+##
 ##     filter, lag
 ```
 
 ```
 ## The following objects are masked from 'package:base':
-## 
+##
 ##     intersect, setdiff, setequal, union
 ```
 
@@ -655,9 +655,9 @@ dim(top5)
 
 ```r
 DoHeatmap(
-    object = experiment.merged, 
+    object = experiment.merged,
     features = top5$gene
-) 
+)
 ```
 
 ```
@@ -766,7 +766,7 @@ DimPlot(object = experiment.batch1, group.by = "RNA_snn_res.0.5", pt.size=0.5, l
 ```r
 experiment.merged$samplecluster = paste(experiment.merged$orig.ident,experiment.merged$finalcluster,sep = '-')
 
-# set the identity to the new variable 
+# set the identity to the new variable
 Idents(experiment.merged) <- "samplecluster"
 
 markers.comp <- FindMarkers(experiment.merged, ident.1 = "UCD_Adj_VitE-0", ident.2= c("UCD_Supp_VitE-0","UCD_VitE_Def-0"))
@@ -852,7 +852,7 @@ save(list=ls(), file="clusters_seurat_object.RData")
 ## Get the next Rmd file
 
 ```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq/master/data_analysis/scRNA_Workshop-PART6.Rmd", "scRNA_Workshop-PART6.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/data_analysis/scRNA_Workshop-PART6.Rmd", "scRNA_Workshop-PART6.Rmd")
 ```
 
 ## Session Information
@@ -865,20 +865,20 @@ sessionInfo()
 ## R version 4.0.0 (2020-04-24)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
 ## Running under: macOS Catalina 10.15.4
-## 
+##
 ## Matrix products: default
 ## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
 ## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
-## 
+##
 ## locale:
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
+##
 ## attached base packages:
 ## [1] stats     graphics  grDevices datasets  utils     methods   base     
-## 
+##
 ## other attached packages:
-## [1] dplyr_0.8.5   ggplot2_3.3.0 Seurat_3.1.5 
-## 
+## [1] dplyr_0.8.5   ggplot2_3.3.0 Seurat_3.1.5
+##
 ## loaded via a namespace (and not attached):
 ##  [1] httr_1.4.1          tidyr_1.0.3         jsonlite_1.6.1     
 ##  [4] viridisLite_0.3.0   splines_4.0.0       leiden_0.3.3       

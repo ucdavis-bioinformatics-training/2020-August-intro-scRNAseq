@@ -28,7 +28,7 @@ First lets view the data without any corrections
 
 ## PCA in prep for tSNE
 
-ScaleData - Scales and centers genes in the dataset. 
+ScaleData - Scales and centers genes in the dataset.
 ```{r}
 ?ScaleData
 experiment.test.noc <- ScaleData(object = experiment.test)
@@ -61,7 +61,7 @@ DimPlot(object = experiment.test.noc,  group.by = "batchid")
 
 Use vars.to.regress to correct for the sample to sample differences and percent mitochondria
 ```{r, fig.align="center", fig.caption="Corrected PCA Plot"}
-experiment.test.regress <- ScaleData(object = experiment.test, 
+experiment.test.regress <- ScaleData(object = experiment.test,
                     vars.to.regress = c("batchid"), model.use = "linear")
 
 experiment.test.regress <- RunPCA(object =experiment.test.regress)
@@ -81,7 +81,7 @@ DimPlot(object = experiment.test.regress, group.by = "batchid", reduction = "tsn
 
 ## Get the next Rmd file
 ```{r, eval=FALSE}
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq/master/data_analysis/scRNA_Workshop-PART4.Rmd", "scRNA_Workshop-PART4.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/data_analysis/scRNA_Workshop-PART4.Rmd", "scRNA_Workshop-PART4.Rmd")
 ```
 
 ## Session Information

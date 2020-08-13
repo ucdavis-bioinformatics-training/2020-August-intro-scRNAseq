@@ -25,20 +25,20 @@ Seurat implements an graph-based clustering approach. Distances between the cell
 The FindClusters function implements the procedure, and contains a resolution parameter that sets the granularity of the downstream clustering, with increased values leading to a greater number of clusters. I tend to like to perform a series of resolutions, investigate and choose.
 
 ```{r}
-use.pcs = 1:29 
+use.pcs = 1:29
 
 ?FindNeighbors
 experiment.aggregate <- FindNeighbors(experiment.aggregate, reduction="pca", dims = use.pcs)
 
 ?FindCluster
 experiment.aggregate <- FindClusters(
-    object = experiment.aggregate, 
-    resolution = seq(0.25,4,0.25), 
+    object = experiment.aggregate,
+    resolution = seq(0.25,4,0.25),
     verbose = FALSE
 )
 ```
 
-Lets first investigate how many clusters each resolution produces and set it to the smallest resolutions of 0.5 (fewest clusters). 
+Lets first investigate how many clusters each resolution produces and set it to the smallest resolutions of 0.5 (fewest clusters).
 
 ```{r}
 sapply(grep("res",colnames(experiment.aggregate@meta.data),value = TRUE),
@@ -96,7 +96,7 @@ and number of genes present
 FeaturePlot(experiment.aggregate, features = c('nFeature_RNA'), pt.size=0.5)
 ```
 
-percent mitochondrial 
+percent mitochondrial
 ```{r}
 FeaturePlot(experiment.aggregate, features = c('percent.mito'), pt.size=0.5)
 ```
@@ -178,7 +178,7 @@ p + scale_alpha_continuous(range = alpha.use, guide = F)
 
 Removing cells assigned to clusters from a plot, So here plot all clusters but clusters "3" and "5"
 ```{r}
-# create a new tmp object with those removed 
+# create a new tmp object with those removed
 experiment.aggregate.tmp <- experiment.aggregate[,-which(Idents(experiment.aggregate) %in% c("3","5"))]
 
 dim(experiment.aggregate)
@@ -208,9 +208,9 @@ table(markers$avg_logFC > 0)
 
 ```
 
- 
-pct.1 and pct.2 are the proportion of cells with expression above 0 in ident.1 and ident.2 respectively. p_val is the raw p_value associated with the differntial expression test with adjusted value in p_val_adj. avg_logFC is the average log fold change difference between the two groups. 
- 
+
+pct.1 and pct.2 are the proportion of cells with expression above 0 in ident.1 and ident.2 respectively. p_val is the raw p_value associated with the differntial expression test with adjusted value in p_val_adj. avg_logFC is the average log fold change difference between the two groups.
+
 avg_diff (lines 130, 193 and) appears to be the difference in log(x = mean(x = exp(x = x) - 1) + 1) between groups.  It doesn’t seem like this should work out to be the signed ratio of pct.1 to pct.2 so I must be missing something.  It doesn’t seem to be related at all to how the p-values are calculated so maybe it doesn’t matter so much, and the sign is probably going to be pretty robust to how expression is measured.
 
 Can use a violin plot to visualize the expression pattern of some markers
@@ -221,16 +221,16 @@ VlnPlot(object = experiment.merged, features = rownames(markers)[1:2], pt.size =
 Or a feature plot
 ```{r}
 FeaturePlot(
-    experiment.merged, 
-    head(rownames(markers), n=6), 
-    cols = c("lightgrey", "blue"), 
+    experiment.merged,
+    head(rownames(markers), n=6),
+    cols = c("lightgrey", "blue"),
     ncol = 2
 )
 
 FeaturePlot(    
-    experiment.merged, 
-    "Fxyd1", 
-    cols = c("lightgrey", "blue") 
+    experiment.merged,
+    "Fxyd1",
+    cols = c("lightgrey", "blue")
 )
 ```
 
@@ -239,9 +239,9 @@ __WARNING: TAKES A LONG TIME TO RUN__
 
 ```{r}
 markers_all <- FindAllMarkers(
-    object = experiment.merged, 
-    only.pos = TRUE, 
-    min.pct = 0.25, 
+    object = experiment.merged,
+    only.pos = TRUE,
+    min.pct = 0.25,
     thresh.use = 0.25
 )
 dim(markers_all)
@@ -264,9 +264,9 @@ library(dplyr)
 top5 <- markers_all_single %>% group_by(cluster) %>% top_n(5, avg_logFC)
 dim(top5)
 DoHeatmap(
-    object = experiment.merged, 
+    object = experiment.merged,
     features = top5$gene
-) 
+)
 ```
 
 ```{r}
@@ -328,7 +328,7 @@ DimPlot(object = experiment.batch1, group.by = "RNA_snn_res.0.5", pt.size=0.5, l
 ```{r}
 experiment.merged$samplecluster = paste(experiment.merged$orig.ident,experiment.merged$finalcluster,sep = '-')
 
-# set the identity to the new variable 
+# set the identity to the new variable
 Idents(experiment.merged) <- "samplecluster"
 
 markers.comp <- FindMarkers(experiment.merged, ident.1 = "UCD_Adj_VitE-0", ident.2= c("UCD_Supp_VitE-0","UCD_VitE_Def-0"))
@@ -347,7 +347,7 @@ save(list=ls(), file="clusters_seurat_object.RData")
 
 ## Get the next Rmd file
 ```{r, eval=FALSE}
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq/master/data_analysis/scRNA_Workshop-PART6.Rmd", "scRNA_Workshop-PART6.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/data_analysis/scRNA_Workshop-PART6.Rmd", "scRNA_Workshop-PART6.Rmd")
 ```
 
 ## Session Information

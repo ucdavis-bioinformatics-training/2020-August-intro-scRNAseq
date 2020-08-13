@@ -82,8 +82,8 @@ experiment.aggregate <- AddMetaData(
 table(experiment.aggregate$batchid)
 ```
 
-<div class='r_output'> 
- Batch1 Batch2 
+<div class='r_output'>
+ Batch1 Batch2
    1992    904
 </div>
 ### Lets spend a little time getting to know the Seurat object.
@@ -132,8 +132,8 @@ write.table(as.matrix(experiment.data),"raw.datatable.txt",sep="\t",col.names=T,
 experiment.aggregate
 ```
 
-<div class='r_output'> An object of class Seurat 
- 12811 features across 2896 samples within 1 assay 
+<div class='r_output'> An object of class Seurat
+ 12811 features across 2896 samples within 1 assay
  Active assay: RNA (12811 features, 0 variable features)
 </div>
 ```r
@@ -144,7 +144,7 @@ save(experiment.aggregate,file="original_seurat_object.RData")
 ## Get the next Rmd file
 
 ```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq/master/data_analysis/scRNA_Workshop-PART2.Rmd", "scRNA_Workshop-PART2.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/data_analysis/scRNA_Workshop-PART2.Rmd", "scRNA_Workshop-PART2.Rmd")
 ```
 
 ## Session Information
@@ -156,27 +156,27 @@ sessionInfo()
 <div class='r_output'> R version 4.0.0 (2020-04-24)
  Platform: x86_64-apple-darwin17.0 (64-bit)
  Running under: macOS Catalina 10.15.4
- 
+
  Matrix products: default
  BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
  LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
- 
+
  locale:
  [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
- 
+
  attached base packages:
  [1] stats     graphics  grDevices datasets  utils     methods   base     
- 
+
  other attached packages:
  [1] Seurat_3.1.5
- 
+
  loaded via a namespace (and not attached):
   [1] httr_1.4.1          tidyr_1.0.3         jsonlite_1.6.1     
   [4] viridisLite_0.3.0   splines_4.0.0       leiden_0.3.3       
   [7] assertthat_0.2.1    BiocManager_1.30.10 renv_0.10.0        
  [10] yaml_2.2.1          ggrepel_0.8.2       globals_0.12.5     
  [13] pillar_1.4.4        lattice_0.20-41     glue_1.4.1         
- [16] reticulate_1.15     digest_0.6.25       RColorBrewer_1.1-2 
+ [16] reticulate_1.15     digest_0.6.25       RColorBrewer_1.1-2
  [19] colorspace_1.4-1    cowplot_1.0.0       htmltools_0.4.0    
  [22] Matrix_1.2-18       plyr_1.8.6          pkgconfig_2.0.3    
  [25] tsne_0.1-3          listenv_0.8.0       purrr_0.3.4        
