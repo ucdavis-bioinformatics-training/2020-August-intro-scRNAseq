@@ -250,6 +250,13 @@ Cell ranger does produce a pretty html report with the same statistics and some 
 
 [Cell Ranger V3 web summary](web_summaryV3.html)
 
+#### CellRanger V4 Updates
+
+* Targeted Gene Expression analysis (New application)
+* When analyzing 3’ Gene Expression data, Cell Ranger 4.0 trims the template switch oligo (TSO) sequence from the 5’ end of Read-2 and the poly-A sequence from the 3’ end before aligning reads to the reference transcriptome. This behavior is different from Cell Ranger 3.1, which does not perform any trimming. Reports improved mapping.
+
+[Cell Ranger V4 web summary](web_summaryV4.html)
+
 ## Exercises
 
 1. Log into tadpole with the username/password given
