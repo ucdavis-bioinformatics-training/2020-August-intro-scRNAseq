@@ -86,7 +86,7 @@ The first line tells sbatch what scripting language (bash here) the rest of the 
 
 
     cd /share/workshop/intro_scrnaseq/$USER
-    wget https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq/master/software_scripts/scripts/template.slurm
+    wget https://raw.githubusercontent.com/ucdavis-bioinformatics-training/020-August-intro-scRNAseq/master/software_scripts/scripts/template.slurm
     cat template.slurm
     sbatch template.slurm
 

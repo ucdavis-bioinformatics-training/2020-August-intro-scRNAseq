@@ -22,7 +22,7 @@ navigation:
   - title: Using Slack in this workshop
     url: base/slack
   - title: Using Zoom in this workshop
-    url: base/zoom  
+    url: base/zoom
   - title: Cheat Sheets
     url: base/cheatSheetIndex
   - title: Software and Links
@@ -78,6 +78,6 @@ navigation:
   - title: Workshop Photos
     url: photos/photos
   - title: Github page
-    url: https://github.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq
+    url: https://github.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq
   - title: Biocore website
     url: http://bioinformatics.ucdavis.edu
