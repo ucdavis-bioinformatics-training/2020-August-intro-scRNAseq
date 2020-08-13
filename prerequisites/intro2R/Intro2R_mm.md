@@ -10,9 +10,11 @@ output:
 
 To download the R notebook for this portion of the course, execute the following command in your R console:
 
+
 ```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/intro2R/Intro2R.Rmd", "Intro2R.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/prerequisites/intro2R/Intro2R.Rmd", "Intro2R.Rmd")
 ```
+
 ---
 
 Topics covered in this introduction to R
