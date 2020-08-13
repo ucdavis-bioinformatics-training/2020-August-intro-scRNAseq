@@ -87,6 +87,12 @@ The R prompt is the '>' , when R is expecting more (command is not complete) you
 
 <img src="RStudio_figures/Prompt.png" alt="Prompt" width="500px"/>
 
+Download the Intro2R.Rmd R notebook document.
+
+```r
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/intro2R/Intro2R.Rmd", "Intro2R.Rmd")
+```
+
 **4\.** Writing and running R commands
 
 In the source editor (top left by default)
