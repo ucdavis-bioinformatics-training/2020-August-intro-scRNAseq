@@ -260,7 +260,7 @@ Cell ranger does produce a pretty html report with the same statistics and some 
 
 2. Load and review cellranger's sub-applications and help docs
 
-3. Review the [cellranger-counts.sh](https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-Intro_Single_Cell_RNA_Seq/master/software_scripts/scripts/cellranger-counts.sh) script used to map fastq files.
+3. Review the [cellranger-counts.sh](https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/software_scripts/scripts/cellranger-counts.sh) script used to map fastq files.
 
 4. Copy contents of the script to your **scrnaseq_example** folder and do a test run.
 
