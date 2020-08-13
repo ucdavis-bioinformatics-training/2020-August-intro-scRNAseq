@@ -8,8 +8,11 @@ output:
 ---
 
 
+To download the R notebook for this portion of the course, execute the following command in your R console:
 
-
+```r
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2020-August-intro-scRNAseq/master/intro2R/Intro2R.Rmd", "Intro2R.Rmd")
+```
 ---
 
 Topics covered in this introduction to R
@@ -359,7 +362,7 @@ of_interest
 ```
 
 ```
-## ENSMUSG00000102693 ENSMUSG00000064842 ENSMUSG00000051951 
+## ENSMUSG00000102693 ENSMUSG00000064842 ENSMUSG00000051951
 ##               TRUE              FALSE              FALSE
 ```
 
@@ -369,7 +372,7 @@ of_interest
 ```
 
 ```
-## ENSMUSG00000102693 ENSMUSG00000064842 ENSMUSG00000051951 
+## ENSMUSG00000102693 ENSMUSG00000064842 ENSMUSG00000051951
 ##               TRUE              FALSE              FALSE
 ```
 
@@ -380,7 +383,7 @@ of_interest[2]
 ```
 
 ```
-## ENSMUSG00000064842 
+## ENSMUSG00000064842
 ##              FALSE
 ```
 
@@ -389,7 +392,7 @@ of_interest["ENSMUSG00000064842"]
 ```
 
 ```
-## ENSMUSG00000064842 
+## ENSMUSG00000064842
 ##              FALSE
 ```
 
@@ -398,7 +401,7 @@ of_interest[c(1,3)]
 ```
 
 ```
-## ENSMUSG00000102693 ENSMUSG00000051951 
+## ENSMUSG00000102693 ENSMUSG00000051951
 ##               TRUE              FALSE
 ```
 
@@ -407,7 +410,7 @@ of_interest[c("ENSMUSG00000102693", "ENSMUSG00000051951")]
 ```
 
 ```
-## ENSMUSG00000102693 ENSMUSG00000051951 
+## ENSMUSG00000102693 ENSMUSG00000051951
 ##               TRUE              FALSE
 ```
 
@@ -512,7 +515,7 @@ summary(treatment)
 ```
 
 ```
-## C A 
+## C A
 ## 2 2
 ```
 
@@ -523,7 +526,7 @@ table(treatment)
 
 ```
 ## treatment
-## C A 
+## C A
 ## 2 2
 ```
 
