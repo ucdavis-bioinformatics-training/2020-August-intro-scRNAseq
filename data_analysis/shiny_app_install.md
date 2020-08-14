@@ -37,7 +37,7 @@ the bottom of the file itself).
     outdir <- "scRNA_shiny"
     unzip(zipf, exdir=outdir)
     
-    saveRDS(experiment.merged, file = "shiny.rds") 
+    saveRDS(experiment.aggregate, file = "shiny.rds") 
 
     ```
 
