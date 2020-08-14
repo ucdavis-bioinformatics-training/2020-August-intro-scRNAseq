@@ -1,9 +1,9 @@
 # scRNA shiny app 
 [Visit the github here](https://github.com/ucdavis-bioinformatics/scRNA_shiny)
 1. Installation
-2. Tutorial
-3. Notes about practical usage of the app
-4. Excercises
+2. Notes about practical usage of the app
+3. Tutorial
+4. Exercises
 5. A few extra notes and link to AWS resources
 
 ---
@@ -56,6 +56,19 @@ the bottom of the file itself).
     
  
  
+---
+## App Practical Usage
+This shiny app was created with the intention of working with biologists to extract meaning from the data by exploration.
+Usage of the app is not for creating finalized "publish ready" images but rather a means for enabling an analysis of 
+potential clustering based on the marker genes of interest (the biological question). The app enables easier interaction
+with the data in order to explore what next steps can be taken towards producing "publish quality" images and which 
+further analyses are relevant to the biological question. 
+
+Manual intervention (such as clustering) with the Seurat objects is often needed following this exploration. The hope 
+is for the app to enables some of these capabilities in the near future. Lets do some exercises to see how might use the
+app to properly infer what custom clustering may need to be done.  
+
+
 
 ---
 ## Shiny App Tutorial
@@ -134,19 +147,6 @@ we cluster on the principal components and then use TSNE or UMAP for display,
 so the difference is purely visual. 
 - tSNE helpful video: https://www.youtube.com/watch?v=NEaUSP4YerM
 - UMPA vs TSNE: https://towardsdatascience.com/tsne-vs-umap-global-structure-4d8045acba17
-
-
----
-## App Practical Usage
-This shiny app was created with the intention of working with biologists to extract meaning from the data by exploration.
-Usage of the app is not for creating finalized "publish ready" images but rather a means for enabling an analysis of 
-potential clustering based on the marker genes of interest (the biological question). The app enables easier interaction
-with the data in order to explore what next steps can be taken towards producing "publish quality" images and which 
-further analyses are relevant to the biological question. 
-
-Manual intervention (such as clustering) with the Seurat objects is often needed following this exploration. The hope 
-is for the app to enables some of these capabilities in the near future. Lets do some exercises to see how might use the
-app to properly infer what custom clustering may need to be done.  
 
 
 ---
