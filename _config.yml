@@ -76,7 +76,9 @@ navigation:
   - title: scRNAseq Analysis - PART6
     url: data_analysis/scRNA_Workshop-PART6_fixed
   - title: Shiny App
-    url: data_analysis/scRNA_Workshop-PART6_fixed
+    url: data_analysis/shiny_app_instal
+  - title: Shiny App on AWS
+    url: data_analysis/shiny_on_aws
 
   - heading: ETC
   - title: Closing thoughts
