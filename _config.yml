@@ -75,6 +75,8 @@ navigation:
     url: data_analysis/scRNA_Workshop-PART5_fixed
   - title: scRNAseq Analysis - PART6
     url: data_analysis/scRNA_Workshop-PART6_fixed
+  - title: Shiny App
+    url: data_analysis/scRNA_Workshop-PART6_fixed
 
   - heading: ETC
   - title: Closing thoughts
