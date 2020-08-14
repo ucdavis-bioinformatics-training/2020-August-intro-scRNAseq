@@ -35,14 +35,18 @@ My recommendation is to follow all of the instructions again, from the beginning
 Now in our 13th year of training researchers, the UC Davis Bioinformatics Core invites you to attend one or more of our 2020 workshops. The following workshops are suitable for beginners, and are also of interest to those with some data analysis experience.
 
 | :------------- |:-------------:|
-| May 26 - May 28, 2020	| Advanced Single Cell RNA-Seq Remote Workshop |
-|Jun 1 - Jun 4, 2020 | Remote RNA-Seq Workshop |
-|Jun 29 - Jul 2, 2020 | Remote Genome Assembly |
-|Jul 27 - Jul 31, 2020 | RNA-Seq Workshop @ UC Davis |
-|Aug 12 - Aug 14, 2020 | Introduction to Single Cell RNA-Seq  @ UC Davis |
 |Aug 17 - Aug 19, 2020 | Advanced Single Cell RNA-Seq @ UC Davis |
 |Oct 5 - Oct 9, 2020 | Bioinformatics: Command Line/R Prerequisites |
 |Nov 30 - Dec 4, 2020 | Introduction to Analysis of Epigenetic Data |
+
+### Advanced Single Cell Analysis
+
+* Preprocessing scRNA sequence data
+* Running cellranger, star and salmon then comparing
+* Anchoring of samples to other samples
+* Monocle cell trajectory analysis
+* Velocity analysis
+* VDJ T and B cell analysis
 
 For more information on these and other events, and to register, go to [https://registration.genomecenter.ucdavis.edu/](https://registration.genomecenter.ucdavis.edu/)
 
