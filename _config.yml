@@ -19,6 +19,8 @@ navigation:
     url: https://raw.githubusercontent.com/ucdavis-bioinformatics-training/ucdavis-bioinformatics-training.presentations/master/singlecell/2020_SingleCell_SampleTalk_DBurkart_Aug.pdf
   - title: Biology at True Resolution: Introduction to Single Cell and Visium Spatial Solutions
     url: https://raw.githubusercontent.com/ucdavis-bioinformatics-training/ucdavis-bioinformatics-training.presentations/master/singlecell/10x_Product_Overview_0813_UCD.pdf
+  - title: Visium Spatial Protocols - Tissue Preparation Guide
+    url: https://support.10xgenomics.com/spatial-gene-expression/sample-prep/doc/demonstrated-protocol-visium-spatial-protocols-tissue-preparation-guide
 
   - heading: Support
   - title: Using Slack in this workshop
