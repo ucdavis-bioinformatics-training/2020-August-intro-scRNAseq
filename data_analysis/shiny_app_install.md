@@ -3,7 +3,6 @@
 1. Installation
 2. Notes about practical usage of the app
 3. Tutorial
-4. Exercises
 5. A few extra notes and link to AWS resources
 
 ---
@@ -147,18 +146,6 @@ we cluster on the principal components and then use TSNE or UMAP for display,
 so the difference is purely visual. 
 - tSNE helpful video: https://www.youtube.com/watch?v=NEaUSP4YerM
 - UMPA vs TSNE: https://towardsdatascience.com/tsne-vs-umap-global-structure-4d8045acba17
-
-
----
-## Exercises
-1) Use the single marker view to look at percent.mito at resolution 0.5 with a reduction of either tsne or umap. 
-Which groups have the highest value? What part of the app can you use to see if these two clusters are the most closely
-related compared to the other clusters?
-
-2) Extracting biological meaning in your data is an important part of scRNA-seq analysis. Typically this can be done by
-looking through literature to confirm markers for cell types from your sample type. 
-    - Check out the paper that this data is from, can you recognize any similar patterns? 
-    - Can you think of anything you might do to the Seurat object that might enable better analysis with the app based on the paper?
 
 
 ---
